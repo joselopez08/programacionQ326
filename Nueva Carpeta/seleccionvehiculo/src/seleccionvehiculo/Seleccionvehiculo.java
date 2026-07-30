@@ -73,12 +73,12 @@ public class Seleccionvehiculo {
        
        System.out.println("");
        
-       /*
+       
        System.out.println("");
        System.out.println("Tu carro es energeticamente eficiente?");
        respuestaCadena = entrada.nextLine();
        System.out.printf("Respuesta ingresada %s",respuestaCadena);
-       
+       /*
        System.out.println("\nSeguro que es asi?");
        respuestaCadena = entrada.nextLine().toUpperCase ();
        System.out.printf("Respuesta ingresada: %s",respuestaCadena);
@@ -92,7 +92,7 @@ public class Seleccionvehiculo {
           System.out.println("Excelente");
           System.out.println("Amigable con el ambiente");
        }
-       else{30
+       else{
             System.out.println("Uyy...busca que hacer");
        }
   
