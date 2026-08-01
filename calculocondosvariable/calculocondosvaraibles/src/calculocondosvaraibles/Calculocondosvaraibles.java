@@ -46,6 +46,6 @@ public class Calculocondosvaraibles {
         
                 
         
-    }//Fin main30
+    }//Finmain
     
-}//Fin Class
+}//FinClass
