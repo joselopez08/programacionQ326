@@ -36,8 +36,8 @@ public class UsodelalibreríaMath {
         resultadocircunferencia = 2 * radio * Math.PI;
         
         System.out.println("");
-        System.out.printf("El area del circulo es %.2f \n", resultadoarea);
-        System.out.printf("La circunferencia del circulo es %.2f ", resultadocircunferencia);
+        System.out.printf("El area del circulo es %.2f cm^2 %n", resultadoarea);
+        System.out.printf("La circunferencia del circulo es %.2f cm ", resultadocircunferencia);
         
         
         
