@@ -46,15 +46,16 @@ public class CalculadoraAritméticadeConsola {
         double divisionNumeros = 0;
         double moduloNumeros = 0;
         
-
+        System.out.println("-------------------------");
         System.out.println("Programa de Calculardora");
+        System.out.println("-------------------------");
         System.out.println("Seleccione una Operacion del Menu");
         System.out.println("+. Suma");
         System.out.println("-. Resta");
         System.out.println("*. Multiplicacion");
         System.out.println("/. Division");
         System.out.println("%. Modulo");
-        System.out.println("");
+        System.out.println("-------------------------");  
         seleccionMenu = entrada.nextLine().charAt(0);
 
         System.out.println("Ingrese el primer numero: ");
