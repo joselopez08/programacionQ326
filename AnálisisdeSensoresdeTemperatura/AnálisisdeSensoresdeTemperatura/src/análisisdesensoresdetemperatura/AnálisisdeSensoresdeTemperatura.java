@@ -31,35 +31,67 @@ public class AnálisisdeSensoresdeTemperatura {
         // TODO code application logic here
         
         Scanner sc = new Scanner (System.in);
-        int numTemperatura =1;
+        int numTemperatura =0;
         double temperatura = 0;
         double promedio = 0;
-        double maximaTemperatura =0;
+        double maximaTemperatura =-273.15;
         double minimaTemperatura =0; 
+        double sumaAcumulada = 0;
+        double diferenciaTermica = 0;
         
-       
+        System.out.println("-----------------------------");
+        System.out.println("Programa de Sensor Industrial");
+        System.out.println("-----------------------------");
+        System.out.println("");
         
-        
-        while (temperatura != -999) {
-
-            if (temperatura < -273.15) {
-                System.out.println("Error Temperatura no Valida");
-            }//fin del if
+        System.out.println("Ingrese la Temperatura en Centigrados: ");
+        temperatura = sc.nextDouble(); 
+     
+        while (temperatura != -999){
+            
+            if (temperatura >= -273.15){
+                
+                if (numTemperatura == 0 ){
+                    maximaTemperatura = temperatura;
+                    minimaTemperatura = temperatura;
+                }//fin de if
+                
+                else {
+                    if (temperatura > maximaTemperatura){
+                        maximaTemperatura = temperatura;
+                    }//fin de if
+                       if (temperatura < minimaTemperatura){
+                           minimaTemperatura = temperatura;
+                       }//fin de if
+                     
+                }//fin de else
+                    sumaAcumulada = sumaAcumulada + temperatura;
+                    numTemperatura = numTemperatura + 1;
+                    
+            }//fin de if
             else {
-                System.out.printf("Temperatura %d)Ingrese la Temperatura: ", numTemperatura);
-                temperatura = sc.nextDouble();
-                numTemperatura++;
-            }//fin del else
+                 System.out.println(" Alerta!!!! Dato no valdio........ "); 
+            }//fin de else
+            System.out.println("Ingrese la Temperatura en Centigrados: ");
+                    temperatura = sc.nextDouble();
             
+                    
+        }//fin del while
+       
+        if (numTemperatura > 0){
+            promedio = sumaAcumulada / numTemperatura;
+            diferenciaTermica = maximaTemperatura - minimaTemperatura;
+            System.out.printf("Promedio de Temperatura: %.2f\n ",promedio);
+            System.out.printf("Diferencia Termica: %.2f",diferenciaTermica);
             
-        }//findelwhile
+        }//fin de if
+        else {
+            System.out.println("No hay temperaturas ingresadas!!!!!!");
+        }//fin de else
         
-            promedio = temperatura / numTemperatura;
-            System.out.printf("Promedio de Temperatura %.2f: ", promedio);
-            
-            
+
         
         
-    }//fin del Main
-    
+                  
+    }//fin de main 
 }//fin de Class
